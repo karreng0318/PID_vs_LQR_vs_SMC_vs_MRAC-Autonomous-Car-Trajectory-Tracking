@@ -40,17 +40,6 @@ Sliding Mode Controller – A custom defined Sliding Mode controller function ha
 
 Model Reference Adaptive Controller – Custom defined Controller function has been written here using Linear Bicycle Model. 
 
- 
-#Project Results and Potential Opportunities
-
-Key Challenges Encountered:
-- LQR Controller: Solving the Riccati equation online was difficult, so ended up calculating the gain offline for a fixed vehicle speed. This led to a sub-optimal performance for US City driving which has a varying vehicle speed. 
-- SMC: Defining effective sliding surfaces and tuning gains were difficult, especially for US City which has varying vehicle speed. 
-- MRAC: Reference model selection for US City driving and the tuning was nontrivial.
-- AI-Based Controllers: Due to time constraints, reinforcement learning or neural network controllers could not be implemented.
-
-The tuning of US City driving was particularly challenging and had to come up with different sliding surface for SMC and had to use different Reference model for MRAC. The low speed and high speed was just a Model Reference Controller without any Adaptive laws whereas for the US City driving, the Adaptive part had to be added to improve performance. 
-
  # Tools Used
  - MATLAB 2024b
  - All controllers are written using MATLAB functions and can be converted to any language of choice if needed
